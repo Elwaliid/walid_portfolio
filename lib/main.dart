@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mysite/core/providers/drawer_provider.dart';
 import 'package:mysite/core/providers/scroll_provider.dart';
-import 'package:mysite/core/theme/app_theme.dart';
+import 'package:mysite/core/app_theme.dart';
 import 'package:mysite/main/main_section.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';

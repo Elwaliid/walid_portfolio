@@ -1,0 +1,92 @@
+import 'dart:ui';
+
+import 'package:mysite/core/colors.dart';
+import 'package:mysite/core/providers/drawer_provider.dart';
+
+import 'package:provider/provider.dart';
+
+import 'package:flutter/material.dart';
+
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    //App.init(context);
+    final drawerProvider = Provider.of<DrawerProvider>(context);
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      key: drawerProvider.key,
+      extendBodyBehindAppBar: true,
+      // appBar: const PreferredSize(
+      //   preferredSize: Size.fromHeight(120),
+      //   child: Responsive(
+      //     desktop: _NavbarDesktop(),
+      //     mobile: _NavBarTablet(),
+      //     tablet: _NavBarTablet(),
+      //   ),
+      // ),
+      // drawer: !Responsive.isDesktop(context) ? const _MobileDrawer() : null,
+      body: Stack(
+        children: [
+          Positioned(
+            top: height * 0.2,
+            left: -88,
+            child: Container(
+              height: height / 3,
+              width: 166,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: secondaryColor,
+              ),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 200, sigmaY: 200),
+                child: Container(
+                  height: 166,
+                  width: 166,
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            right: -100,
+            child: Container(
+              height: 100,
+              width: 200,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: primaryColor.withOpacity(0.5),
+              ),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 500, sigmaY: 500),
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
+
+          Align(
+            alignment: Alignment.center,
+            // BG01.png
+            child: Image.asset(
+              'assets/imgs/design.png',
+              opacity: const AlwaysStoppedAnimation<double>(0.5),
+              width: width,
+              height: height,
+              fit: BoxFit.cover,
+              alignment: Alignment.topCenter,
+            ),
+          ),
+          //  _Body(),
+          //const ArrowOnTop(),
+        ],
+      ),
+    );
+  }
+}

@@ -1,13 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:mysite/core/app_theme.dart';
-import 'package:mysite/core/providers/drawer_provider.dart';
-import 'package:mysite/core/responsivness/responsive.dart';
-import 'package:mysite/core/text_space_config/space.dart';
-import 'package:mysite/sections/main/utils/navbar_utils.dart';
-import 'package:mysite/sections/main/widgets/navbar_logo.dart';
-import 'package:mysite/sections/main/widgets/navbar_actions_button.dart';
-import 'package:provider/provider.dart';
-import 'package:sizer/sizer.dart';
+part of '../main_section.dart';
 
 class _NavbarDesktop extends StatefulWidget {
   const _NavbarDesktop({Key? key}) : super(key: key);

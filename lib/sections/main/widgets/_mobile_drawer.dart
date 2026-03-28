@@ -6,7 +6,7 @@ class _MobileDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scrollProvider = Provider.of<ScrollProvider>(context);
-    // theme
+
     var theme = Theme.of(context);
     return Drawer(
       child: Builder(

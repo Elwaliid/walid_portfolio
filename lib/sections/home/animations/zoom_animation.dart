@@ -1,5 +1,8 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: deprecated_member_use
 
+import 'package:flutter/material.dart';
+import 'package:mysite/core/app_theme.dart';
+import 'package:mysite/sections/home/widgets/border_gradiant.dart';
 
 class ZoomAnimations extends StatefulWidget {
   const ZoomAnimations({Key? key}) : super(key: key);
@@ -63,7 +66,48 @@ class _ZoomAnimationsState extends State<ZoomAnimations>
       height: size.width / 4,
       child: AlignTransition(
         alignment: _alignAnimation,
-        child:,
+        child: BorderGradiant(
+          strokeWidth: 5,
+          radius: size.width * 0.2,
+          padding: const EdgeInsets.all(5),
+          width: size.width * sizeAnimation.value,
+          height: size.width * sizeAnimation.value,
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                theme.secondaryColor,
+                theme.secondaryColor.withOpacity(0),
+                theme.primaryColor.withOpacity(0.1),
+                theme.primaryColor
+              ],
+              stops: const [
+                0.2,
+                0.4,
+                0.6,
+                1
+              ]),
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: const DecorationImage(
+                fit: BoxFit.cover,
+                alignment: Alignment.bottomLeft,
+                image: AssetImage('assets/imgs/wal.png'),
+              ),
+              // Add radial gradient for dark edges
+              gradient: RadialGradient(
+                center: Alignment.center,
+                radius: 0.8,
+                colors: [
+                  Colors.transparent, // center stays clear
+                  Colors.black.withOpacity(0.05), // edges dark
+                ],
+                stops: const [0.6, 1.0],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -1,0 +1,21 @@
+part of 'services.dart';
+
+class ServiceMobile extends StatelessWidget {
+  const ServiceMobile({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const CustomSectionHeading(text: '\nWhat I can do?'),
+        Space.y(3.w)!,
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.w),
+          child: CustomSectionSubHeading(text: servicesSubHeading),
+        ),
+        Space.y(5.w)!,
+        const ToolsGridSection(),
+      ],
+    );
+  }
+}

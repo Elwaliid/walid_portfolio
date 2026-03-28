@@ -1,6 +1,7 @@
 import 'package:mysite/changes/gif.dart';
 import 'package:mysite/core/responsivness/responsive_size.dart';
 import 'package:mysite/sections/animations/entrance_fader.dart';
+import 'package:mysite/sections/home/widgets/typer_animated_texts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -66,7 +67,7 @@ class HomeDesktop extends StatelessWidget {
                       AnimatedTextKit(
                         isRepeatingAnimation: true,
                         repeatForever: true,
-                        animatedTexts: desktopList,
+                        animatedTexts: desktoptexts,
                       ),
                     ],
                   ),

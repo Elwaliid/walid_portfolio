@@ -2,6 +2,7 @@ import 'package:mysite/changes/gif.dart';
 import 'package:mysite/core/responsivness/responsive_size.dart';
 import 'package:mysite/sections/animations/entrance_fader.dart';
 import 'package:mysite/sections/home/widgets/typer_animated_texts.dart';
+import 'package:mysite/sections/widgets/color_chage_btn.dart';
 import 'package:sizer/sizer.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -82,12 +83,12 @@ class HomeDesktop extends StatelessWidget {
                         )),
                   ),
                   Space.y(3.w)!,
-                  // ColorChageButton(
-                  //   text: 'download cv',
-                  //   onTap: () {
-                  //     html.window.open(resume, "pdf");
-                  //   },
-                  // ),
+                  ColorChageButton(
+                    text: 'download cv',
+                    onTap: () {
+                      html.window.open(resume, "pdf");
+                    },
+                  ),
                 ],
               ),
             ),

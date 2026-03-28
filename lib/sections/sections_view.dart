@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mysite/sections/home/home.dart';
 
 class Body {
   static List<Widget> views = [
-    // const HomePage(),
+    const HomePage(),
     // const Services(),
     // const Portfolio(),
     // const Contact(),

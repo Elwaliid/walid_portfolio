@@ -1,22 +1,22 @@
 import 'dart:ui';
+import 'package:mysite/sections/main/widgets/arrow_on_top.dart';
 
 import 'package:mysite/core/colors.dart';
-import 'package:mysite/core/providers/drawer_provider.dart';
-import 'package:mysite/core/providers/scroll_provider.dart';
+import 'package:mysite/providers/drawer_provider.dart';
+import 'package:mysite/providers/scroll_provider.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:mysite/core/app_theme.dart';
+import 'package:mysite/core/text_space_config/configs.dart';
+import 'package:mysite/core/text_space_config/app.dart';
 
-import 'package:mysite/core/text_space_config/space.dart';
 import 'package:mysite/sections/main/utils/navbar_utils.dart';
-import 'package:mysite/sections/main/widgets/arrow_on_top.dart';
+
 import 'package:mysite/sections/main/widgets/navbar_logo.dart';
 import 'package:mysite/sections/main/widgets/navbar_actions_button.dart';
 import 'package:mysite/sections/sections_view.dart' show Body;
 import 'package:provider/provider.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:sizer/sizer.dart';
-
 part 'widgets/_navbars.dart';
 part 'widgets/_mobile_drawer.dart';
 part 'widgets/_body.dart';
@@ -26,7 +26,7 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //App.init(context);
+    App.init(context);
     final drawerProvider = Provider.of<DrawerProvider>(context);
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;

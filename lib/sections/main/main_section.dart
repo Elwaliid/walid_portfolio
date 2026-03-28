@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:mysite/sections/main/widgets/arrow_on_top.dart';
 
 import 'package:mysite/core/colors.dart';
-import 'package:mysite/providers/drawer_provider.dart';
-import 'package:mysite/providers/scroll_provider.dart';
+import 'package:mysite/core/providers/drawer_provider.dart';
+import 'package:mysite/core/providers/scroll_provider.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:mysite/core/text_space_config/configs.dart';

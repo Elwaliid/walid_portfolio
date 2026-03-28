@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mysite/core/colors.dart';
 import 'package:mysite/core/text_space_config/configs.dart';
-import 'package:mysite/providers/scroll_provider.dart';
+import 'package:mysite/core/providers/scroll_provider.dart';
 import 'package:mysite/sections/animations/entrance_fader.dart';
 import 'package:provider/provider.dart';
 

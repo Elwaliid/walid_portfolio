@@ -9,13 +9,17 @@ import 'package:mysite/core/app_theme.dart';
 
 import 'package:mysite/core/text_space_config/space.dart';
 import 'package:mysite/sections/main/utils/navbar_utils.dart';
+import 'package:mysite/sections/main/widgets/arrow_on_top.dart';
 import 'package:mysite/sections/main/widgets/navbar_logo.dart';
 import 'package:mysite/sections/main/widgets/navbar_actions_button.dart';
+import 'package:mysite/sections/sections_view.dart' show Body;
 import 'package:provider/provider.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:sizer/sizer.dart';
 
 part 'widgets/_navbars.dart';
 part 'widgets/_mobile_drawer.dart';
+part 'widgets/_body.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -80,7 +84,6 @@ class MainPage extends StatelessWidget {
               ),
             ),
           ),
-
           Align(
             alignment: Alignment.center,
             // BG01.png
@@ -93,8 +96,8 @@ class MainPage extends StatelessWidget {
               alignment: Alignment.topCenter,
             ),
           ),
-          //  _Body(),
-          //const ArrowOnTop(),
+          _Body(),
+          const ArrowOnTop(),
         ],
       ),
     );

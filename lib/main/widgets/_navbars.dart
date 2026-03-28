@@ -3,6 +3,8 @@ import 'package:mysite/core/app_theme.dart';
 import 'package:mysite/core/providers/drawer_provider.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
 import 'package:mysite/core/text_space_config/space.dart';
+import 'package:mysite/main/utils/navbar_utils.dart';
+import 'package:mysite/main/widgets/navbar_logo.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -24,14 +26,14 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
       color: theme.navBarColor,
       child: Row(
         children: [
-          // const NavBarLogo(),
+          const NavBarLogo(),
           Space.xm!,
-          // ...NavBarUtils.names.asMap().entries.map(
-          //       (e) => NavBarActionButton(
-          //         label: e.value,
-          //         index: e.key,
-          //       ),
-          //     ),
+          ...NavBarUtils.names.asMap().entries.map(
+                (e) => NavBarActionButton(
+                  label: e.value,
+                  index: e.key,
+                ),
+              ),
         ],
       ),
     );
@@ -59,8 +61,7 @@ class _NavBarTablet extends StatelessWidget {
             icon: const Icon(Icons.menu),
           ),
           Space.xm!,
-          // const NavBarLogo(),
-          // Space.x1!,
+          const NavBarLogo(),
         ],
       ),
     );

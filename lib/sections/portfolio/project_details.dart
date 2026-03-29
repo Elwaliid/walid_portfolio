@@ -6,6 +6,7 @@ import 'package:mysite/core/app_theme.dart';
 import 'package:mysite/sections/main/widgets/navbar_logo.dart';
 import 'package:mysite/sections/portfolio/animations/dislay_on_scroll.dart';
 import 'package:mysite/sections/portfolio/util/project_utils.dart';
+import 'package:mysite/sections/portfolio/widgets/phone_preview.dart';
 
 import 'package:sizer/sizer.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
@@ -49,26 +50,26 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
   }
 
   void _showLivePreview(String url) {
-    // final overlay = Overlay.of(context);
-    // late OverlayEntry entry;
-    // entry = OverlayEntry(
-    //   builder: (context) => GestureDetector(
-    //     onTap: () => entry.remove(),
-    //     child: Container(
-    //       color: Colors.black54,
-    //       alignment: Alignment.center,
-    //       child: GestureDetector(
-    //         onTap: () {},
-    //         child: SizedBox(
-    //           width: MediaQuery.of(context).size.width <= 510 ? 90.w : 490,
-    //           height: MediaQuery.of(context).size.width <= 830 ? 100.h : 810,
-    //           child: PhonePreview(url: url),
-    //         ),
-    //       ),
-    //     ),
-    //   ),
-    // );
-    // overlay.insert(entry);
+    final overlay = Overlay.of(context);
+    late OverlayEntry entry;
+    entry = OverlayEntry(
+      builder: (context) => GestureDetector(
+        onTap: () => entry.remove(),
+        child: Container(
+          color: Colors.black54,
+          alignment: Alignment.center,
+          child: GestureDetector(
+            onTap: () {},
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width <= 510 ? 90.w : 490,
+              height: MediaQuery.of(context).size.width <= 830 ? 100.h : 810,
+              child: PhonePreview(url: url),
+            ),
+          ),
+        ),
+      ),
+    );
+    overlay.insert(entry);
   }
 
   @override

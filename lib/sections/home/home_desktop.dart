@@ -1,4 +1,4 @@
-import 'package:mysite/changes/gif.dart';
+import 'package:mysite/links&texts/gif.dart';
 import 'package:mysite/core/responsivness/responsive_size.dart';
 
 import 'package:mysite/core/animations/entrance_fader.dart';
@@ -10,8 +10,8 @@ import 'package:universal_html/html.dart' as html;
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-import 'package:mysite/changes/links.dart';
-import 'package:mysite/changes/strings.dart';
+import 'package:mysite/links&texts/links.dart';
+import 'package:mysite/links&texts/strings.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';
 

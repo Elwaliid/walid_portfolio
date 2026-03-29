@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mysite/changes/links.dart';
-import 'package:mysite/changes/strings.dart';
+import 'package:mysite/links&texts/links.dart';
+import 'package:mysite/links&texts/strings.dart';
 import 'package:mysite/core/colors.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';

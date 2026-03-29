@@ -4,14 +4,14 @@ import 'package:mysite/changes/links.dart';
 import 'package:mysite/changes/strings.dart';
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/url_launch.dart';
-import 'package:mysite/sections/portfolio/util/project_utils.dart';
-import 'package:mysite/sections/widgets/custom_text_heading.dart';
+import 'package:mysite/sections/projects/util/project_utils.dart';
+import 'package:mysite/core/widgets/custom_text_heading.dart';
 import 'package:sizer/sizer.dart';
 
 import 'widgets/project_card.dart';
 
-class PortfolioMobileTab extends StatelessWidget {
-  const PortfolioMobileTab({Key? key}) : super(key: key);
+class ProjectsMobileTab extends StatelessWidget {
+  const ProjectsMobileTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

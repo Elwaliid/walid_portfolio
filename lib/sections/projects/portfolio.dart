@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'portfolio_desktop.dart';
-import 'portfolio_mobile.dart';
+import 'projects_desktop.dart';
+import 'projects_mobile.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
 
 class Portfolio extends StatelessWidget {
@@ -9,9 +9,9 @@ class Portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Responsive(
-      mobile: PortfolioMobileTab(),
-      tablet: PortfolioMobileTab(),
-      desktop: PortfolioDesktop(),
+      mobile: ProjectsMobileTab(),
+      tablet: ProjectsMobileTab(),
+      desktop: ProjectsDesktop(),
     );
   }
 }

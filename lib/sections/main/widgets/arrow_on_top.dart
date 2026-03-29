@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mysite/core/colors.dart';
 
 import 'package:mysite/core/providers/scroll_provider.dart';
-import 'package:mysite/sections/animations/entrance_fader.dart';
+import 'package:mysite/core/animations/entrance_fader.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 

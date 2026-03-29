@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mysite/sections/animations/entrance_fader.dart';
+import 'package:mysite/core/animations/entrance_fader.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class ScrollEntrance extends StatefulWidget {

@@ -3,9 +3,9 @@ import 'package:mysite/core/colors.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
-import 'package:mysite/sections/portfolio/project_details.dart';
-import 'package:mysite/sections/portfolio/util/project_utils.dart';
-import 'package:mysite/sections/portfolio/widgets/phone_preview.dart';
+import 'package:mysite/sections/projects/project_details.dart';
+import 'package:mysite/sections/projects/util/project_utils.dart';
+import 'package:mysite/sections/projects/widgets/phone_preview.dart';
 
 import 'package:sizer/sizer.dart';
 

@@ -4,9 +4,9 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:mysite/core/app_theme.dart';
 import 'package:mysite/sections/main/widgets/navbar_logo.dart';
-import 'package:mysite/sections/portfolio/animations/dislay_on_scroll.dart';
-import 'package:mysite/sections/portfolio/util/project_utils.dart';
-import 'package:mysite/sections/portfolio/widgets/phone_preview.dart';
+import 'package:mysite/sections/projects/animations/dislay_on_scroll.dart';
+import 'package:mysite/sections/projects/util/project_utils.dart';
+import 'package:mysite/sections/projects/widgets/phone_preview.dart';
 
 import 'package:sizer/sizer.dart';
 import 'package:mysite/core/responsivness/responsive.dart';

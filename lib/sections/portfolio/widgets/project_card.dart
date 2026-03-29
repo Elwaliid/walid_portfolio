@@ -3,6 +3,7 @@ import 'package:mysite/core/colors.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
+import 'package:mysite/sections/portfolio/project_details.dart';
 import 'package:mysite/sections/portfolio/util/project_utils.dart';
 
 import 'package:sizer/sizer.dart';
@@ -190,52 +191,52 @@ class ProjectCardState extends State<ProjectCard> {
                   ),
                 ),
               ),
-              // Positioned(
-              //   top: 13,
-              //   left: 13,
-              //   child: Material(
-              //     color: Colors.transparent,
-              //     child: OutlinedButton(
-              //       onPressed: () {
-              //         Navigator.push(
-              //           context,
-              //           MaterialPageRoute(
-              //             builder: (context) => ProjectDetailsScreen(
-              //               project: widget.project,
-              //             ),
-              //           ),
-              //         );
-              //       },
-              //       style: OutlinedButton.styleFrom(
-              //         side: BorderSide(
-              //           color: effectiveIsHover
-              //               ? Colors.white.withOpacity(0.8)
-              //               : Colors.transparent,
-              //           width: Responsive.isDesktop(context) ? 1.5 : 1,
-              //         ),
-              //         shape: RoundedRectangleBorder(
-              //           borderRadius: BorderRadius.circular(16),
-              //         ),
-              //         padding: const EdgeInsets.symmetric(
-              //           horizontal: 16,
-              //           vertical: 8,
-              //         ),
-              //       ),
-              //       child: Text(
-              //         'Details',
-              //         style: TextStyle(
-              //           color: effectiveIsHover
-              //               // ignore: deprecated_member_use
-              //               ? const Color.fromARGB(255, 255, 255, 255)
-              //                   .withOpacity(0.9)
-              //               : Colors.transparent,
-              //           fontWeight: FontWeight.w500,
-              //           fontSize: 14,
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              Positioned(
+                top: 13,
+                left: 13,
+                child: Material(
+                  color: Colors.transparent,
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProjectDetailsScreen(
+                            project: widget.project,
+                          ),
+                        ),
+                      );
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        color: effectiveIsHover
+                            ? Colors.white.withOpacity(0.8)
+                            : Colors.transparent,
+                        width: Responsive.isDesktop(context) ? 1.5 : 1,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                    ),
+                    child: Text(
+                      'Details',
+                      style: TextStyle(
+                        color: effectiveIsHover
+                            // ignore: deprecated_member_use
+                            ? const Color.fromARGB(255, 255, 255, 255)
+                                .withOpacity(0.9)
+                            : Colors.transparent,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

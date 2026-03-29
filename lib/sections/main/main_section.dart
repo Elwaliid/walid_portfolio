@@ -13,7 +13,7 @@ import 'package:mysite/sections/main/utils/navbar_utils.dart';
 
 import 'package:mysite/sections/main/widgets/navbar_logo.dart';
 import 'package:mysite/sections/main/widgets/navbar_actions_button.dart';
-import 'package:mysite/sections/sections_view.dart' show Body;
+import 'package:mysite/sections/main/sections_view.dart' show Body;
 import 'package:provider/provider.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:sizer/sizer.dart';

@@ -2,6 +2,7 @@
 
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import 'package:mysite/sections/portfolio/animations/dislay_on_scroll.dart';
 import 'package:mysite/sections/portfolio/util/project_utils.dart';
 
 import 'package:sizer/sizer.dart';
@@ -63,9 +64,47 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
 
     // List section builder
     Widget buildListSection(String title, List<String> items) {
-      return const Column(
+      return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [],
+        children: [
+          ScrollEntrance(
+            child: Text(title, style: sectionTitleStyle(title)),
+          ),
+          SizedBox(height: 2.h),
+          ...List.generate(
+            items.length,
+            (index) => ScrollEntrance(
+              delay: Duration(milliseconds: 200 + index * 100),
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 1.5.h),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      '•',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white70,
+                        height: 1.6,
+                      ),
+                    ),
+                    SizedBox(width: 1.w),
+                    Expanded(
+                      child: Text(
+                        items[index],
+                        style: TextStyle(
+                          fontSize: Responsive.isDesktop(context) ? 18 : 14,
+                          color: Colors.white70,
+                          height: 1.6,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       );
     }
 

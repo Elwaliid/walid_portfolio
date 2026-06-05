@@ -52,7 +52,7 @@ List<ProjectUtils> projectUtils = [
     titles: 'Algerian Weather App',
     description:
         'A beautifully animated Flutter weather app for Algeria with real-time forecasts, day/night backgrounds, and a full calendar view.',
-    links: 'https://github.com/Elwaliid/jawwi', // replace with your actual link
+    links: 'https://jawwi-9c64a.web.app/', // replace with your actual link
     subtitle: 'Animated Flutter Weather App for Algeria',
     overview: """
 Jawwi is a Flutter weather application built specifically for Algerian cities, delivering real-time weather data through a visually rich and animated interface. The app fetches live forecasts from the Open-Meteo API and maps them to a fully custom UI featuring glassmorphism cards, animated day/night gradient backgrounds, a star field animation, and Lottie splash sequences. Users can search any Algerian commune or wilaya and instantly get current conditions, hourly forecasts, a 16-day weekly breakdown, and a full calendar view — all adapting dynamically to sunrise/sunset times. The project represents a strong focus on UI polish, animation architecture, and clean data flow across screens.

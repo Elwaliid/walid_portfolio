@@ -41,7 +41,7 @@ class ProjectUtils {
 List<ProjectUtils> projectUtils = [
   //////////////////////////////////////////////////////////////////////////////////////////////
   ProjectUtils(
-    banners: '',
+    banners: 'assets/imgs/jawwi.png',
     name: 'Jawwi',
     image: '',
     color1: '',

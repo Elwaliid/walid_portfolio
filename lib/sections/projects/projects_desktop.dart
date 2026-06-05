@@ -18,9 +18,15 @@ class ProjectsDesktop extends StatefulWidget {
 }
 
 class _ProjectsDesktopState extends State<ProjectsDesktop> {
+  bool _showAll = false;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    final visibleProjects =
+        _showAll ? projectUtils : projectUtils.take(4).toList();
+
     return Container(
       padding:
           EdgeInsets.symmetric(horizontal: size.width / 8).copyWith(top: 0),
@@ -34,7 +40,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
             alignment: WrapAlignment.start,
             crossAxisAlignment: WrapCrossAlignment.start,
             runSpacing: 3.w,
-            children: projectUtils
+            children: visibleProjects
                 .asMap()
                 .entries
                 .map(
@@ -43,19 +49,41 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                 .toList(),
           ),
           Space.y(1.5.w)!,
-          OutlinedButton(
-            onPressed: () => openURL(previews),
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'View Previews',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+          Space.y(1.5.w)!,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (projectUtils.length > 4) ...[
+                OutlinedButton(
+                  onPressed: () => setState(() => _showAll = !_showAll),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      _showAll ? 'Less' : 'More',
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+              ],
+              OutlinedButton(
+                onPressed: () => openURL(previews),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'View Previews',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
-            ),
-          )
+            ],
+          ),
         ],
       ),
     );

@@ -105,8 +105,7 @@ MyBusiness is a full-stack CRM application designed to streamline client managem
     titles: 'Algerian Weather App',
     description:
         'A beautifully animated Flutter weather app for Algeria with real-time forecasts, day/night backgrounds, and a full calendar view.',
-    links:
-        'https://github.com/yourusername/jawwi', // replace with your actual link
+    links: 'https://github.com/Elwaliid/jawwi', // replace with your actual link
     subtitle: 'Animated Flutter Weather App for Algeria',
     overview: """
 Jawwi is a Flutter weather application built specifically for Algerian cities, delivering real-time weather data through a visually rich and animated interface. The app fetches live forecasts from the Open-Meteo API and maps them to a fully custom UI featuring glassmorphism cards, animated day/night gradient backgrounds, a star field animation, and Lottie splash sequences. Users can search any Algerian commune or wilaya and instantly get current conditions, hourly forecasts, a 16-day weekly breakdown, and a full calendar view — all adapting dynamically to sunrise/sunset times. The project represents a strong focus on UI polish, animation architecture, and clean data flow across screens.
@@ -118,8 +117,6 @@ Jawwi is a Flutter weather application built specifically for Algerian cities, d
       "http (REST calls)",
       "Lottie (animations)",
       "mesh (OMeshGradient backgrounds)",
-      "dart:convert (JSON parsing)",
-      "Google Fonts",
     ],
     features: [
       "City/wilaya search using a preloaded Algeria coordinates dataset",
@@ -128,10 +125,7 @@ Jawwi is a Flutter weather application built specifically for Algerian cities, d
       "16-day weekly forecast with expandable daily hourly strips",
       "Full calendar view matching daily weather data to a month grid",
       "Animated day/night backgrounds (mesh gradients + star field)",
-      "Glassmorphism UI with BackdropFilter blur containers",
-      "Skeleton loading placeholders during data fetch",
-      "Lottie splash screen with staggered text fade-in animations",
-      "Floating page toggle between weather and calendar views",
+      "Professional splash screen with layered Lottie logo animation",
     ],
     challenges: [
       "Coordinating multiple AnimationControllers for layered splash animations",
@@ -145,11 +139,11 @@ Jawwi is a Flutter weather application built specifically for Algerian cities, d
       "Composing complex Flutter animation hierarchies (implicit, explicit, Lottie)",
       "Applying glassmorphism and mesh gradient techniques for polished UI",
       "Structuring a Flutter app with a clear separation between data, state, and UI layers",
-      "Handling edge cases in time-based UI logic (hourly wrapping, sunrise/sunset comparisons)",
+      "Handling edge cases in time-based UI logic (weather, sunrise/sunset , location)",
     ],
     cta: {
-      "live": "https://wilou-crm.web.app",
-      "github": "https://github.com/Elwaliid/CRM"
+      "live": "https://jawwi-9c64a.web.app/",
+      "github": "https://github.com/Elwaliid/jawwi"
     },
   ),
   ProjectUtils(

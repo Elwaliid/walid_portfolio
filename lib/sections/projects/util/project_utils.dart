@@ -94,6 +94,60 @@ MyBusiness is a full-stack CRM application designed to streamline client managem
     },
   ),
   ProjectUtils(
+    banners: 'assets/imgs/crm.png',
+    name: 'MyBusiness',
+    image: 'assets/crmF.jpeg',
+    color1: '',
+    color2: '',
+    icons: [
+      'assets/imgs/flutter.png',
+      'assets/imgs/nodejs.png',
+      'assets/imgs/firebase.png'
+    ],
+    titles: 'CRM Management App',
+    description:
+        'A full-stack CRM application built with Flutter and Node.js that helps manage clients, tasks, and workflow efficiently with a modern UI.',
+    links: 'https://wilou-crm.web.app',
+    subtitle: 'Full-Stack CRM & Workflow Management System',
+    overview: """
+MyBusiness is a full-stack CRM application designed to streamline client management, task tracking. Built as my second major project, this application represents a significant leap in both technical depth and architectural thinking. It integrates a custom Node.js backend with a Flutter frontend, delivering a more structured, maintainable, and production-oriented solution. The project focuses on solving real-world business needs such as client organization, activity tracking, scheduling, and communication — all within a clean and responsive user experience.
+""",
+    techStack: [
+      "Flutter",
+      "Node.js",
+      "MongoDB (Mongoose)",
+      "Firebase (for activity tracking & experiments)",
+      "Postman (API testing)"
+    ],
+    features: [
+      "Secure authentication system (Google OAuth + OTP password recovery)",
+      "Client management system with full CRUD operations",
+      "Advanced scheduling system (Day / Week / Month views)",
+      "Admin activity tracking (logs for add, update, delete, email, navigation)",
+      "Email sending functionality directly from the app",
+      "Analytics dashboard with line charts and pie charts",
+      "Reusable widget system for consistent UI components",
+      "Improved and scalable project structure"
+    ],
+    challenges: [
+      "Designing and integrating a custom backend using Node.js and MongoDB",
+      "Structuring APIs and handling data flow between frontend and backend",
+      "Implementing secure authentication flows (OAuth and OTP)",
+      "Building analytics visualizations without prior experience",
+    ],
+    learnings: [
+      "Backend development with Node.js and MongoDB",
+      "Designing and consuming REST APIs",
+      "Testing and debugging APIs using Postman",
+      "Building scalable Flutter architectures with reusable components",
+      "Improving UI/UX design and consistency across the app",
+    ],
+    cta: {
+      "live": "https://wilou-crm.web.app",
+      "github": "https://github.com/Elwaliid/CRM"
+    },
+  ),
+  ProjectUtils(
     banners: 'assets/imgs/hiky.png',
     name: 'Hiky',
     image: 'assets/hikyF.jpg',

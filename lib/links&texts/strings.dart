@@ -20,7 +20,7 @@ String servicesSubHeading =
 //
 
 String protfolioSubHeading =
-    "Since starting my journey as a developer, I’ve built projects including the Gym Finder, CRM, and Hiky mobile apps, as well as my portfolio website. I focus on full-stack development and modern UI/UX design using technologies like Flutter, Node.js, and MongoDB.";
+    "Since starting my journey as a developer, I’ve built projects including the Gym Finder, CRM, Hiky and jawwi mobile apps, as well as my portfolio website. I focus on full-stack development and modern UI/UX design using technologies like Flutter, Node.js, and MongoDB.";
 const String aboutMeHeadline =
     'I\'m Walid Boubaidja, a Mobile App developer, Web developer and UI designer.';
 

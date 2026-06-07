@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:mysite/core/url_launch.dart';
 import 'package:mysite/links&texts/gif.dart';
 import 'package:mysite/links&texts/links.dart';
 import 'package:mysite/links&texts/strings.dart';
@@ -97,7 +98,7 @@ class HomeTab extends StatelessWidget {
                 ColorChageButton(
                   text: 'download cv',
                   onTap: () {
-                    html.window.open(resume, "pdf");
+                    openURL(resume);
                   },
                 ),
               ],

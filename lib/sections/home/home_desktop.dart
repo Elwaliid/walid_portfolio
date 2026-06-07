@@ -1,3 +1,4 @@
+import 'package:mysite/core/url_launch.dart';
 import 'package:mysite/links&texts/gif.dart';
 import 'package:mysite/core/responsivness/responsive_size.dart';
 
@@ -88,7 +89,7 @@ class HomeDesktop extends StatelessWidget {
                   ColorChageButton(
                     text: 'download cv',
                     onTap: () {
-                      html.window.open(resume, "pdf");
+                      openURL(resume);
                     },
                   ),
                 ],

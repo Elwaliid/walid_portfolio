@@ -65,26 +65,24 @@ Jawwi is a Flutter weather application built specifically for Algerian cities, d
       "HTML/CSS/JS (Web Landing Page)",
     ],
     features: [
-      "City/wilaya search using a preloaded Algeria coordinates dataset",
-      "Full calendar view matching daily weather data to a month grid",
+      "Automated in-app version checking with a custom update dialog to seamlessly distribute new releases."
+          "Full calendar view matching daily weather data to a month grid",
       "Smart offline caching of 14-day weather forecasts for faster load times and offline availability",
       "Professional splash screen with layered Lottie logo animation",
       "web landing page mirroring the app's dynamic aesthetic for APK downloads",
     ],
     challenges: [
       "Coordinating multiple AnimationControllers for layered splash animations",
-      "Implementing dynamic day/night background switching tied to real sunrise/sunset data",
       "Implementing centralized state management using Provider to prevent redundant data fetching and ensure a single source of truth across the app.",
       "Implementing flexible, adaptive layouts to guarantee responsiveness across a wide range of mobile devices.",
       "Designing an efficient data pipeline to handle complex synchronization, strategic offline caching, and the precise execution order of multiple data fetches."
     ],
     learnings: [
       "Integrating and mapping third-party REST API responses into typed Dart models",
-      "Composing complex Flutter animation hierarchies (implicit, explicit, Lottie)",
       "Structuring a Flutter app with a clear separation between data, state, and UI layers",
-      "Handling edge cases in time-based UI logic (weather, sunrise/sunset, location)",
+      "Handling edge cases in time-based UI logic (api data, cashed data expiration while offline,Date rollover handling)",
       "Handling device location services, permission lifecycles, and smart data caching via SharedPreferences.",
-      "Handling device location services, permission lifecycles, and smart data caching via SharedPreferences."
+      "Releasing the app for public download and implementing in-app notifications for new updates."
     ],
     cta: {
       "live": "https://elwaliid.github.io/jawwi-landing/",

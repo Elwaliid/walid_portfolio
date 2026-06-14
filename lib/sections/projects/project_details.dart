@@ -348,13 +348,14 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   // Lauch Button
-                  ScrollEntrance(
-                    child: _GlassButton(
-                      icon: Icons.launch,
-                      label: 'Launch',
-                      onTap: () => _showLivePreview(project.cta['live']!),
+                  if (project.cta['live']!.isNotEmpty)
+                    ScrollEntrance(
+                      child: _GlassButton(
+                        icon: Icons.launch,
+                        label: 'Download',
+                        onTap: () => _showLivePreview(project.cta['live']!),
+                      ),
                     ),
-                  ),
                   SizedBox(width: 2.w),
                   // GitHub Button
                   if (project.cta['github']!.isNotEmpty)

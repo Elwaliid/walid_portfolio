@@ -42,54 +42,52 @@ List<ProjectUtils> projectUtils = [
   //////////////////////////////////////////////////////////////////////////////////////////////
   ProjectUtils(
     banners: 'assets/imgs/jawwi.png',
-    name: 'Jawwi',
+    name: 'Jawwek',
     image: '',
     color1: '',
     color2: '',
     icons: [
       'assets/imgs/flutter.png',
     ],
-    titles: 'Algerian Weather App',
+    titles: 'Jawwek - Algerian Weather App',
     description:
-        'A beautifully animated Flutter weather app for Algeria with real-time forecasts, day/night backgrounds, and a full calendar view.',
-    links: 'https://jawwi-9c64a.web.app/', // replace with your actual link
+        'A beautifully animated Flutter weather app for Algeria with real-time forecasts, automatic GPS localization, day/night backgrounds, and a full calendar view.',
+    links: 'https://jawwi-9c64a.web.app/',
     subtitle: 'Animated Flutter Weather App for Algeria',
     overview: """
-Jawwi is a Flutter weather application built specifically for Algerian cities, delivering real-time weather data through a visually rich and animated interface. The app fetches live forecasts from the Open-Meteo API and maps them to a fully custom UI featuring glassmorphism cards, animated day/night gradient backgrounds, a star field animation, and Lottie splash sequences. Users can search any Algerian commune or wilaya and instantly get current conditions, hourly forecasts, a 16-day weekly breakdown, and a full calendar view — all adapting dynamically to sunrise/sunset times. The project represents a strong focus on UI polish, animation architecture, and clean data flow across screens.
+Jawwi is a Flutter weather application built specifically for Algerian cities, delivering real-time weather data through a visually rich and animated interface. The app fetches live forecasts from the Open-Meteo API and maps them to a fully custom UI featuring glassmorphism cards, animated day/night gradient backgrounds, a star field animation, and Lottie splash sequences. Users can automatically detect their location via GPS (with smart permission handling and reverse-geocoding) or search any Algerian commune/wilaya to instantly get current conditions, hourly forecasts, a 14-day weekly breakdown, and a full calendar view. The project represents a strong focus on UI polish, clean data flow, native hardware integrations, and is accompanied by a custom-built, animated web landing page.
 """,
     techStack: [
       "Flutter",
       "Provider (state management)",
       "Open-Meteo API",
-      "http (REST calls)",
       "Lottie (animations)",
-      "mesh (OMeshGradient backgrounds)",
+      "HTML/CSS/JS (Web Landing Page)",
     ],
     features: [
       "City/wilaya search using a preloaded Algeria coordinates dataset",
-      "Real-time current weather with condition, emoji, feels-like, and wind speed",
-      "Hourly forecast with smart next-day appending after 20:00",
-      "16-day weekly forecast with expandable daily hourly strips",
       "Full calendar view matching daily weather data to a month grid",
-      "Animated day/night backgrounds (mesh gradients + star field)",
+      "Smart offline caching of 14-day weather forecasts for faster load times and offline availability",
       "Professional splash screen with layered Lottie logo animation",
+      "web landing page mirroring the app's dynamic aesthetic for APK downloads",
     ],
     challenges: [
       "Coordinating multiple AnimationControllers for layered splash animations",
-      "Building and maintaining a preloaded Algeria places dataset for offline coordinate lookup",
       "Implementing dynamic day/night background switching tied to real sunrise/sunset data",
-      "Managing cross-screen state with a hybrid approach (Provider for sunrise/sunset, local state for weather data)",
-      "Designing an expandable weekly card system with smooth AnimatedContainer transitions",
+      "Implementing centralized state management using Provider to prevent redundant data fetching and ensure a single source of truth across the app.",
+      "Implementing flexible, adaptive layouts to guarantee responsiveness across a wide range of mobile devices.",
+      "Designing an efficient data pipeline to handle complex synchronization, strategic offline caching, and the precise execution order of multiple data fetches."
     ],
     learnings: [
       "Integrating and mapping third-party REST API responses into typed Dart models",
       "Composing complex Flutter animation hierarchies (implicit, explicit, Lottie)",
-      "Applying glassmorphism and mesh gradient techniques for polished UI",
       "Structuring a Flutter app with a clear separation between data, state, and UI layers",
-      "Handling edge cases in time-based UI logic (weather, sunrise/sunset , location)",
+      "Handling edge cases in time-based UI logic (weather, sunrise/sunset, location)",
+      "Handling device location services, permission lifecycles, and smart data caching via SharedPreferences.",
+      "Handling device location services, permission lifecycles, and smart data caching via SharedPreferences."
     ],
     cta: {
-      "live": "https://jawwi-9c64a.web.app/",
+      "live": "https://elwaliid.github.io/jawwi-landing/",
       "github": "https://github.com/Elwaliid/jawwi"
     },
   ),
@@ -143,10 +141,7 @@ MyBusiness is a full-stack CRM application designed to streamline client managem
       "Building scalable Flutter architectures with reusable components",
       "Improving UI/UX design and consistency across the app",
     ],
-    cta: {
-      "live": "https://wilou-crm.web.app",
-      "github": "https://github.com/Elwaliid/CRM"
-    },
+    cta: {"live": "", "github": "https://github.com/Elwaliid/CRM"},
   ),
   ProjectUtils(
     banners: 'assets/imgs/hiky.png',
@@ -192,10 +187,7 @@ Hiky is a modern social platform designed for hiking enthusiasts to discover, sh
       "Designing systems with scalability and performance in mind",
       "Building a product with a long-term vision and roadmap"
     ],
-    cta: {
-      "live": "https://hiky-wiky.web.app",
-      "github": "https://github.com/Elwaliid/Hiky"
-    },
+    cta: {"live": "", "github": "https://github.com/Elwaliid/Hiky"},
   ),
   ProjectUtils(
     banners: 'assets/imgs/gymfinder.png',
@@ -236,10 +228,7 @@ GymFinder is a mobile application built with Flutter and Firebase, designed to h
       "CRUD operations and real-time data handling",
       "Structuring code using models and separated logic files",
     ],
-    cta: {
-      "live": "https://gyms-9788e.web.app",
-      "github": "https://github.com/Elwaliid/gym-finder"
-    },
+    cta: {"live": "", "github": "https://github.com/Elwaliid/gym-finder"},
   ),
   ProjectUtils(
     banners: 'assets/portfF.png',
@@ -281,9 +270,6 @@ My first fully deployed website built with Flutter, designed to showcase my proj
       "Learned deployment strategies with Firebase Hosting",
       "Improved overall design sense and UI consistency",
     ],
-    cta: {
-      "live": "https://portfolio-50a83.web.app",
-      "github": "https://github.com/Elwaliid/walid_portfolio"
-    },
+    cta: {"live": "", "github": "https://github.com/Elwaliid/walid_portfolio"},
   ),
 ];

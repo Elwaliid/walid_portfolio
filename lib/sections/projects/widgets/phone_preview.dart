@@ -57,8 +57,8 @@ return const Card(
     }
     return Center(
       child: Container(
-        width: 490,
-        height: 810,
+        width: 465,
+        height: 850,
         decoration: BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.circular(40),

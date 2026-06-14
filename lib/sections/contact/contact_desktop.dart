@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:mysite/links&texts/links.dart';
-import 'package:mysite/links&texts/strings.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:mysite/core/colors.dart';
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/url_launch.dart';
@@ -16,6 +18,8 @@ class ContactDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     Size size = MediaQuery.of(context).size;
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: size.width / 8),
       child: Column(
@@ -61,7 +65,7 @@ class ContactDesktop extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              contactHeadding,
+                            s.contactHeading,
                               style: TextStyle(
                                 height: 1.2,
                                 fontSize: 8.sp,
@@ -70,7 +74,7 @@ class ContactDesktop extends StatelessWidget {
                             ),
                             Space.y(1.w)!,
                             Text(
-                              contactSubHeadding,
+                               s.contactSubHeading,
                               style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w100,

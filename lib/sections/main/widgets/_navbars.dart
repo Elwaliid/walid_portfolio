@@ -13,6 +13,8 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
     Size size = MediaQuery.of(context).size;
     // theme
     var theme = Theme.of(context);
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: size.width / 8, vertical: 10),
       color: theme.navBarColor,
@@ -20,12 +22,14 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
         children: [
           const NavBarLogo(),
           Space.xm!,
-          ...NavBarUtils.names.asMap().entries.map(
+          ...s.navItems.asMap().entries.map(
                 (e) => NavBarActionButton(
                   label: e.value,
                   index: e.key,
                 ),
               ),
+          const Spacer(),
+          const LanguageToggleButton(),
         ],
       ),
     );

@@ -4,7 +4,9 @@ import 'package:mysite/core/url_launch.dart';
 import 'package:mysite/links&texts/gif.dart';
 
 import 'package:mysite/links&texts/links.dart';
-import 'package:mysite/links&texts/strings.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/responsivness/responsive_size.dart';
@@ -20,6 +22,8 @@ class HomeMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     return Padding(
       padding: EdgeInsets.only(left: 10.w, top: 10.h, right: 10.w),
       child: Column(
@@ -29,7 +33,7 @@ class HomeMobile extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                hellotag,
+                s.hellotag,
                 style: AppText.h3!.copyWith(fontSize: isFontSize(context, 16)),
               ),
               // Space.x!,
@@ -38,7 +42,7 @@ class HomeMobile extends StatelessWidget {
           ),
           // Space.y(1.w)!,
           Text(
-            yourname,
+            s.yourname,
             style: TextStyle(
               fontSize: isFontSize(context, 28),
               fontWeight: FontWeight.w600,
@@ -56,7 +60,7 @@ class HomeMobile extends StatelessWidget {
                 ),
               ),
               AnimatedTextKit(
-                animatedTexts: mobiletexts,
+                animatedTexts: mobiletexts(s),
                 repeatForever: true,
                 isRepeatingAnimation: true,
               ),

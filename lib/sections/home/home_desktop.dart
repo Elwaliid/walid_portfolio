@@ -12,7 +12,9 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 import 'package:mysite/links&texts/links.dart';
-import 'package:mysite/links&texts/strings.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';
 
@@ -22,6 +24,8 @@ class HomeDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
 
     return SizedBox(
       height: 80.h,
@@ -41,7 +45,7 @@ class HomeDesktop extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(hellotag,
+                      Text(s.hellotag,
                           style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w100,
@@ -55,7 +59,7 @@ class HomeDesktop extends StatelessWidget {
                     ],
                   ),
                   Space.y(0.5.w)!,
-                  Text(yourname,
+                  Text(s.yourname,
                       style: const TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.w600,
@@ -71,14 +75,14 @@ class HomeDesktop extends StatelessWidget {
                       AnimatedTextKit(
                         isRepeatingAnimation: true,
                         repeatForever: true,
-                        animatedTexts: desktoptexts,
+                        animatedTexts: desktoptexts(s),
                       ),
                     ],
                   ),
                   Space.y(1.5.w)!,
                   Padding(
                     padding: EdgeInsets.only(right: 10.w),
-                    child: Text(miniDescription,
+                    child: Text(s.miniDescription,
                         style: TextStyle(
                           fontSize: isFontSize(context, 20),
                           fontWeight: FontWeight.w400,

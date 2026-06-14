@@ -2,6 +2,10 @@
 
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:mysite/core/url_launch.dart';
+import 'package:provider/provider.dart';
 import 'package:mysite/core/app_theme.dart';
 import 'package:mysite/sections/main/widgets/navbar_logo.dart';
 import 'package:mysite/sections/projects/animations/dislay_on_scroll.dart';
@@ -76,6 +80,8 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     final project = widget.project;
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
 
     // Unified title style
     TextStyle sectionTitleStyle(String title) {
@@ -243,7 +249,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
                 children: [
                   ScrollEntrance(
                     child: Text(
-                      'Tech Stack',
+                      s.techStack,
                       style: TextStyle(
                         fontSize: Responsive.isDesktop(context) ? 6.h : 3.h,
                         fontWeight: FontWeight.bold,
@@ -316,28 +322,28 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Expanded(
-                          child: buildListSection('Features', project.features),
+                          child: buildListSection(s.features, project.features),
                         ),
                         SizedBox(width: 5.w),
                         Expanded(
                           child: buildListSection(
-                              'Challenges', project.challenges),
+                              s.challenges, project.challenges),
                         ),
                         SizedBox(width: 5.w),
                         Expanded(
                           child:
-                              buildListSection('Learnings', project.learnings),
+                              buildListSection(s.learnings, project.learnings),
                         ),
                       ],
                     )
                   : Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        buildListSection('Features', project.features),
+                        buildListSection(s.features, project.features),
                         SizedBox(height: 4.h),
-                        buildListSection('Challenges', project.challenges),
+                        buildListSection(s.challenges, project.challenges),
                         SizedBox(height: 4.h),
-                        buildListSection('Learnings', project.learnings),
+                        buildListSection(s.learnings, project.learnings),
                       ],
                     ),
             ),
@@ -352,8 +358,8 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
                     ScrollEntrance(
                       child: _GlassButton(
                         icon: Icons.launch,
-                        label: 'Download',
-                        onTap: () => _showLivePreview(project.cta['live']!),
+                        label: s.download,
+                        onTap: () => openURL(project.cta['live']!),
                       ),
                     ),
                   SizedBox(width: 2.w),
@@ -362,7 +368,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen>
                     ScrollEntrance(
                       child: _GlassButton(
                         icon: Icons.code,
-                        label: 'GitHub',
+                        label: s.github,
                         onTap: () =>
                             launchUrl(Uri.parse(project.cta['github']!)),
                       ),

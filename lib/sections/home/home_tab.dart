@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:mysite/core/url_launch.dart';
 import 'package:mysite/links&texts/gif.dart';
 import 'package:mysite/links&texts/links.dart';
-import 'package:mysite/links&texts/strings.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/responsivness/responsive_size.dart';
 import 'package:mysite/core/animations/entrance_fader.dart';
@@ -19,6 +21,8 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     return SizedBox(
       height: 60.h,
       child: Stack(
@@ -42,7 +46,7 @@ class HomeTab extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      hellotag,
+                      s.hellotag,
                       style: AppText.h3!
                           .copyWith(fontSize: isFontSize(context, 18)),
                     ),
@@ -56,7 +60,7 @@ class HomeTab extends StatelessWidget {
                 ),
                 Space.y(1.w)!,
                 Text(
-                  yourname,
+                  s.yourname,
                   style: TextStyle(
                     fontSize: isFontSize(context, 38),
                     fontWeight: FontWeight.w600,
@@ -77,7 +81,7 @@ class HomeTab extends StatelessWidget {
                         ),
                       ),
                       AnimatedTextKit(
-                        animatedTexts: tabtexts,
+                        animatedTexts: tabtexts(s),
                         isRepeatingAnimation: true,
                       ),
                     ],
@@ -87,7 +91,7 @@ class HomeTab extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(right: 50.w),
                   child: Text(
-                    miniDescription,
+                    s.miniDescription,
                     style: TextStyle(
                         fontSize: isFontSize(context, 16),
                         fontWeight: FontWeight.w100,

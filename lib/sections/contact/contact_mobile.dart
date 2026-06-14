@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mysite/links&texts/links.dart';
-import 'package:mysite/links&texts/strings.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:mysite/core/colors.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';
@@ -16,14 +18,16 @@ class ContactMobileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     return Column(
       children: [
         Space.y(10.w)!,
-        CustomSectionHeading(text: contactHeadding),
+        CustomSectionHeading(text: s.contactHeading),
         Space.y(3.w)!,
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
-          child: CustomSectionSubHeading(text: contactSubHeadding),
+          child: CustomSectionSubHeading(text: s.contactSubHeading),
         ),
         Space.y(5.w)!,
         InkWell(

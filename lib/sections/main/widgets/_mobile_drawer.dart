@@ -6,7 +6,8 @@ class _MobileDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scrollProvider = Provider.of<ScrollProvider>(context);
-
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     var theme = Theme.of(context);
     return Drawer(
       child: Builder(
@@ -21,7 +22,7 @@ class _MobileDrawer extends StatelessWidget {
                   const Divider(),
 
                   const Divider(),
-                  ...NavBarUtils.names.asMap().entries.map(
+                  ...s.navItems.asMap().entries.map(
                         (e) => Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: MaterialButton(
@@ -42,6 +43,7 @@ class _MobileDrawer extends StatelessWidget {
                         ),
                       ),
                   Space.y(5.w)!,
+                  const LanguageToggleButton(compact: true),
                   // ColorChageButton(
                   //   text: 'RESUME',
                   //   onTap: () {

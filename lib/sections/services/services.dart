@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mysite/links&texts/strings.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/sections/services/widgets/tools_grid_section.dart';

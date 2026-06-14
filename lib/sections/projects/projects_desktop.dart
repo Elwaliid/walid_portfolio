@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mysite/links&texts/links.dart';
-import 'package:mysite/links&texts/strings.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/url_launch.dart';
 import 'package:mysite/sections/projects/util/project_utils.dart';
@@ -23,6 +25,9 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
+    final projectUtils = getProjectUtils(langProvider.locale.languageCode);
 
     final visibleProjects =
         _showAll ? projectUtils : projectUtils.take(4).toList();
@@ -32,9 +37,9 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
           EdgeInsets.symmetric(horizontal: size.width / 8).copyWith(top: 0),
       child: Column(
         children: [
-          const CustomSectionHeading(text: "\nProjects"),
+          CustomSectionHeading(text: s.projects),
           Space.y(1.w)!,
-          CustomSectionSubHeading(text: protfolioSubHeading),
+          CustomSectionSubHeading(text: s.protfolioSubHeading),
           Space.y(1.w)!,
           Wrap(
             alignment: WrapAlignment.start,
@@ -59,7 +64,7 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      _showAll ? 'Less' : 'More',
+                      _showAll ? s.less : s.more,
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -71,11 +76,11 @@ class _ProjectsDesktopState extends State<ProjectsDesktop> {
               ],
               OutlinedButton(
                 onPressed: () => openURL(previews),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'View Previews',
-                    style: TextStyle(
+                    s.viewPreviews,
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),

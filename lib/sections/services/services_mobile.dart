@@ -5,13 +5,15 @@ class ServiceMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     return Column(
       children: [
-        const CustomSectionHeading(text: '\nWhat I can do?'),
+        CustomSectionHeading(text: s.whatICanDo),
         Space.y(3.w)!,
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
-          child: CustomSectionSubHeading(text: servicesSubHeading),
+          child: CustomSectionSubHeading(text: s.servicesSubHeading),
         ),
         Space.y(5.w)!,
         const ToolsGridSection(),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mysite/core/colors.dart';
+import 'package:mysite/core/app_strings.dart';
+import 'package:mysite/core/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'package:mysite/core/text_space_config/configs.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
@@ -36,9 +39,10 @@ class ProjectCardState extends State<ProjectCard> {
         spreadRadius: 2,
       ),
     ];
-    // double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     var theme = Theme.of(context);
+    final langProvider = Provider.of<LanguageProvider>(context);
+    final s = AppStrings.of(langProvider.locale.languageCode);
     return InkWell(
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
@@ -181,7 +185,7 @@ class ProjectCardState extends State<ProjectCard> {
                       ),
                     ),
                     child: Text(
-                      'Launch',
+                      s.launch,
                       style: TextStyle(
                         color:
                             effectiveIsHover ? whiteColor : Colors.transparent,
@@ -224,7 +228,7 @@ class ProjectCardState extends State<ProjectCard> {
                       ),
                     ),
                     child: Text(
-                      'Details',
+                      s.details,
                       style: TextStyle(
                         color: effectiveIsHover
                             // ignore: deprecated_member_use

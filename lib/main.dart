@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mysite/core/providers/drawer_provider.dart';
+import 'package:mysite/core/providers/language_provider.dart';
 import 'package:mysite/core/providers/scroll_provider.dart';
 import 'package:mysite/core/app_theme.dart';
 import 'package:mysite/sections/main/main_section.dart';
@@ -20,6 +21,7 @@ class MySiteApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => DrawerProvider()),
         ChangeNotifierProvider(create: (_) => ScrollProvider()),
+        ChangeNotifierProvider(create: (_) => LanguageProvider()),
       ],
       child: Sizer(
         builder: (context, orientation, deviceType) {

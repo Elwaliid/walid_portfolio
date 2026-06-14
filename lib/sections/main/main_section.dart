@@ -3,7 +3,9 @@ import 'package:mysite/sections/main/widgets/arrow_on_top.dart';
 
 import 'package:mysite/core/colors.dart';
 import 'package:mysite/core/providers/drawer_provider.dart';
+import 'package:mysite/core/providers/language_provider.dart';
 import 'package:mysite/core/providers/scroll_provider.dart';
+import 'package:mysite/core/app_strings.dart';
 import 'package:mysite/core/responsivness/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:mysite/core/text_space_config/configs.dart';
@@ -13,6 +15,7 @@ import 'package:mysite/sections/main/utils/navbar_utils.dart';
 
 import 'package:mysite/sections/main/widgets/navbar_logo.dart';
 import 'package:mysite/sections/main/widgets/navbar_actions_button.dart';
+import 'package:mysite/core/widgets/language_toggle_button.dart';
 import 'package:mysite/sections/main/sections_view.dart' show Body;
 import 'package:provider/provider.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
